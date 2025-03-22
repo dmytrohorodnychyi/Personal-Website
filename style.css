@@ -220,6 +220,14 @@ header {
     margin-left: 270px;
 }
 
+.page {
+    display: none; 
+}
+
+.page.active {
+    display: block;
+}
+
 @media (max-width: 768px) {
     .side-menu {
         width: 200px;
