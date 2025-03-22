@@ -136,10 +136,125 @@ a:hover {
     text-decoration: underline;
 }
 
+.wrapper {
+    display: flex;
+}
+
+.side-menu {
+    width: 250px;
+    height: 100vh;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    left: -210px;
+    top: 0;
+    overflow-y: auto;
+    transition: left 0.4s ease;
+    z-index: 1000;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.side-menu:hover {
+    left: 0;
+}
+
+.content-wrapper {
+    margin-left: 40px;
+    transition: margin-left 0.4s ease;
+}
+
+.side-menu:hover + .content-wrapper {
+    margin-left: 210px;
+}
+
+header, .container {
+    transition: margin-left 0.4s ease;
+}
+
+.side-menu:hover + .wrapper header,
+.side-menu:hover + .wrapper .container {
+    margin-left: 210px;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #555;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.side-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu:hover ul li a {
+    opacity: 1;
+    transition: opacity
+}
+
+.side-menu ul li a:hover {
+    background: #4caf50;
+    color: #fff;
+}
+
+.container {
+    margin-left: 40px;
+    padding: 20px;
+}
+
+header {
+    margin-left: 40px;
+    transition: margin-left 0.4s;
+}
+
+.side-menu:hover + .container {
+    margin-left: 270px;
+}
+
 @media (max-width: 768px) {
+    .side-menu {
+        width: 200px;
+        left: -180px;
+    }
+
+    .side-menu:hover {
+        left: 0;
+    }
+
+    .content-wrapper {
+        margin-left: 20px;
+    }
+
+    .side-menu:hover + .content-wrapper {
+        margin-left: 180px;
+    }
+
+    .container, header {
+        margin-left: 20px;
+    }
+
+    .side-menu:hover + .wrapper header,
+    .side-menu:hover + .wrapper .container {
+        margin-left: 180px;
+    }
+
+    .side-menu:hover + .container {
+        margin-left: 220px;
+    }
+
     .header, .footer {
         padding: 20px;
     }
+
     .profile-pic {
         width: 120px;
         height: 120px;
