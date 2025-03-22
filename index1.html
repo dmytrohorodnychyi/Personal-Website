@@ -7,17 +7,17 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+	<script src="script.js" deger></script>
 </head>
 
 <body>
-
-
+<section id="home" class="page home">
 	<div class="wrapper">
 		<nav class="side-menu">
 			<ul>
 				<li><a href="#cv">CV</a></li>
-				<li><a href="#about">About Me</a></li>
-				<li><a href="#projects">My  Projects</a></li>
+				<li><a href="#about" onclick="showPage('about')">About Me</a></li>
+				<li><a href="#projects" onclick="showPage('projects')">My  Projects</a></li>
 			</ul>
 		</nav>
 
@@ -46,7 +46,7 @@
 				<p>Providing interpreting services.</p>
 			</article>
 
-			<atricle class="youth">
+			<article class="youth">
 				<h3>Youth Advisory Panel <span>2024-present</span></h3>
 				<p>Working as a volunteer at Youth Advisory Panel in Buttle UK, improving the charity's advertising campaign
 					and making them more popular among youth.
@@ -103,4 +103,15 @@
 	<footer class="footer">
 		<p>© 2025 Dima Horodnychyi | <a href="mailto:dih19@aber.ac.uk">Contact Me</a></p>
 	</footer>
+</section>
+
+<section id="about" class="page">
+	<h1>About me</h1>
+	<p>Here will be some info about me.</p>
+</section>
+
+<section id="projects" class="page">
+	<h1>Projects</h1>
+	<p>Here some projects will be showcased.</p>
+</section>
 </body>
